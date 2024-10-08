@@ -22,7 +22,7 @@ Para ejecutar esta aplicación, necesitas tener instalados los siguientes compon
 
  ## Clona este repositorio en tu máquina local:
 
-   git clone https://github.com/tu_usuario/currency-converter.git](https://github.com/jose2806/CurrencyConverter.git
+   git clone https://github.com/jose2806/CurrencyConverter.git
    cd currency-converter
    
 ## Uso
