@@ -23,4 +23,24 @@ jobs:
 
     - name: Build with Maven
       run: mvn clean install
-      working-directory: ./  # Esto debe apuntar a la raíz donde está pom.xml
+      working-directory: ./  # Apunta a la raíz donde está pom.xml
+
+    - name: Deploy to GitHub Pages
+      run: |
+        # Crear directorio temporal para los archivos de construcción
+        mkdir gh-pages-branch
+        # Copiar los archivos de build al nuevo directorio
+        cp -r target/* gh-pages-branch/
+        cd gh-pages-branch
+        
+        # Configurar Git
+        git init
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+
+        # Agregar los archivos generados y hacer commit
+        git add .
+        git commit -m "Deploy Maven build to gh-pages"
+
+        # Forzar la subida a la rama gh-pages
+        git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" main:gh-pages
