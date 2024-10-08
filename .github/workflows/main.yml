@@ -43,4 +43,4 @@ jobs:
         git commit -m "Deploy Maven build to gh-pages"
 
         # Forzar la subida a la rama gh-pages
-        git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" master:gh-pages
+        git push --force --quiet "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" main:gh-pages
