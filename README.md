@@ -23,7 +23,6 @@ Para ejecutar esta aplicación, necesitas tener instalados los siguientes compon
  ## Clona este repositorio en tu máquina local:
 
    git clone https://github.com/jose2806/CurrencyConverter.git
-   cd currency-converter
    
 ## Uso
 - Al iniciar la aplicación, se mostrará una ventana con botones para cada par de divisas disponible.
