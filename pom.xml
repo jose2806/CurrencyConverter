@@ -16,17 +16,36 @@
 
     <build>
         <plugins>
+            <!-- Plugin para compilar el código -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.10.1</version> <!-- Usa una versión compatible -->
+                <version>3.10.1</version>
                 <configuration>
-                    <source>21</source>
+                    <source>21</source> <!-- O la versión que estés usando -->
                     <target>21</target>
+                </configuration>
+            </plugin>
+
+            <!-- Plugin para empaquetar el JAR ejecutable -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <!-- Aquí especificas la clase principal con el método main -->
+                            <mainClass>Main</mainClass>
+                            C:\Users\XPC\Desktop\ONE\CurrencyConverter\src\main\java\Main.java
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
         </plugins>
     </build>
+
 
     <dependencies>
         <!-- Otras dependencias -->
