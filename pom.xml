@@ -37,8 +37,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <!-- Aquí especificas la clase principal con el método main -->
-                            <mainClass>Main</mainClass>
-                            C:\Users\XPC\Desktop\ONE\CurrencyConverter\src\main\java\Main.java
+                            <mainClass>org.example.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
